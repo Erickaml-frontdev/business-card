@@ -1,0 +1,48 @@
+body {
+    margin: 20px;
+    font-family: "Space Grotesk", sans-serif;
+    
+}
+
+.avatar {
+    width: 150px;
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: url(../images/pattern-background.png) #3a419b no-repeat center;
+    background-size: cover;
+    color: #ffffff;
+    border-bottom: 10px solid #ffafcc;
+    border-radius: 8px;   
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: #000 1px 0 10px;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff9e20;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
